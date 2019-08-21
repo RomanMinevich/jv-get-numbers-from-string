@@ -11,12 +11,8 @@ public class FindNumbers {
      * числа 96, 18, 26 и 0.
      */
     public int[] getAllNumbers(String text) {
-        String modifiedText = "";
-        for (int i = 0; i < text.length(); i++) {
-            modifiedText += (Character.isDigit(text.charAt(i)) || text.charAt(i) == '-')
-                    ? text.charAt(i) : " ";
-        }
-        String[] parts = modifiedText.split(" ");
+        text = text.replaceAll("[^-?0-9]", " ");
+        String[] parts = text.split(" ");
         int length = 0;
         for (String part : parts) {
             if (!(part.equals(""))) {
