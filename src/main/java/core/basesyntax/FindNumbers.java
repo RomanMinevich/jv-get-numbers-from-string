@@ -12,7 +12,7 @@ public class FindNumbers {
      */
     public int[] getAllNumbers(String text) {
         String modifiedText = "";
-        for(int i = 0; i < text.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
             modifiedText += (Character.isDigit(text.charAt(i)) || text.charAt(i) == '-')
                     ? text.charAt(i) : " ";
         }
